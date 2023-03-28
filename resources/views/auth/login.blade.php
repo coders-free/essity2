@@ -16,6 +16,8 @@
                             Iniciar sesión en tu cuenta
                         </h2>
 
+                        <x-validation-errors class="mb-4" />
+
                         <form method="POST" action="{{ route('login') }}">
 
                             @csrf
