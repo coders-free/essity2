@@ -1,0 +1,27 @@
+.card {
+    @apply bg-white rounded-lg shadow ;
+}
+
+.card-body {
+    @apply px-6 py-8;
+}
+
+.btn {
+    @apply font-bold py-2 px-4 rounded disabled:opacity-25;
+}
+
+/* .btn-blue {
+    @apply bg-blue-500 hover:bg-blue-700 text-white;
+} */
+
+.btn-blue {
+    @apply bg-[#00005A] hover:bg-[#000079] text-white;
+}
+
+.btn-magenta {
+    @apply bg-[#f50082] hover:bg-[#C10066] text-white;
+}
+
+.btn-outline-magenta {
+    @apply bg-transparent hover:bg-[#f50082] text-[#f50082] hover:text-white border border-[#f50082] hover:border-transparent; 
+}
