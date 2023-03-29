@@ -9,29 +9,29 @@
 
             <ul class="space-y-2 mr-12 text-sm">
                 <li>
-                    <a href="">Normas de uso</a>
+                    <a href="{{route('rules-of-use')}}">Normas de uso</a>
                 </li>
 
                 <li>
-                    <a href="">Politicas de privacidad</a>
+                    <a href="{{route('privacy-policy')}}">Politicas de privacidad</a>
                 </li>
 
                 <li>
-                    <a href="">Politicas de Cookies</a>
+                    <a href="{{route('cookie-policy')}}">Politicas de Cookies</a>
                 </li>
             </ul>
 
             <ul class="space-y-2 text-sm">
                 <li>
-                    <a href="">Contacto</a>
+                    <a href="{{route('contact.index')}}">Contacto</a>
                 </li>
 
                 <li>
-                    <a href="">Sitemap</a>
+                    <a href="{{route('privacy-policy')}}">Sitemap</a>
                 </li>
 
                 <li>
-                    <a href="">FAQ</a>
+                    <a href="{{route('faq')}}">FAQ</a>
                 </li>
             </ul>
 

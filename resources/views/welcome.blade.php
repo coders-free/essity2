@@ -100,168 +100,79 @@
         </section>
 
         {{-- Historial de pedidos --}}
-        <section class="mb-24">
+        @if ($orders->count())
+        
+            <section class="mb-24">
 
-            <div class="flex justify-between mb-4">
-                <h2 class="text-4xl text-darkblue">
-                    Historial de pedidos
-                </h2>
+                <div class="flex justify-between mb-4">
+                    <h2 class="text-4xl text-darkblue">
+                        Historial de pedidos
+                    </h2>
 
-                <a class="text-magenta" href="">Ver todo el historial</a>
-            </div>
+                    <a class="text-magenta" href="">Ver todo el historial</a>
+                </div>
 
-            <div class="overflow-auto bg-white shadow">
+                <div class="overflow-auto bg-white shadow">
 
-                <table class="w-full">
-                    <thead class="bg-darkblue text-white">
-                        <tr>
-                            <th class="py-2 px-4 text-left">Pedido ID</th>
-                            <th class="py-2 px-4 text-left">Fecha de pedido</th>
-                            <th class="py-2 px-4 text-left">Estatus</th>
-                            <th class="py-2 px-4 text-left">Vendedor</th>
-                            <th class="py-2 px-4">Volver a pedir</th>
-                            <th class="py-2 px-4">Ver</th>
-                        </tr>
-                    </thead>
+                    <table class="w-full">
+                        <thead class="bg-darkblue text-white">
+                            <tr>
+                                <th class="py-2 px-4 text-left">Pedido ID</th>
+                                <th class="py-2 px-4 text-left">Fecha de pedido</th>
+                                <th class="py-2 px-4 text-left">Estatus</th>
+                                <th class="py-2 px-4 text-left">Vendedor</th>
+                                <th class="py-2 px-4">Volver a pedir</th>
+                                <th class="py-2 px-4">Ver</th>
+                            </tr>
+                        </thead>
 
-                    <tbody class="divide-y divide-gray-200">
-                        <tr>
-                            <td class="py-2 px-4">
-                                0002256787
-                            </td>
-                            <td class="py-2 px-4">
-                                31/02/22
-                            </td>
-                            <td class="py-2 px-4">
-                                Aprobado
-                            </td>
-                            <td class="py-2 px-4">
-                                Nombre del vendedor
-                            </td>
-                            <td class="py-2 px-4">
-                                <div class="flex justify-center">
-                                
-                                    <a href="">
-                                        <img src="{{asset('img/icons/Reorder2.svg')}}" alt="">
-                                    </a>
+                        <tbody class="divide-y divide-gray-200">
+                            @foreach ($orders as $order)
+                            
+                                <tr>
+                                    <td class="py-2 px-4">
+                                        {{ str_pad($order->id, 8, '0', STR_PAD_LEFT) }}
+                                    </td>
+                                    <td class="py-2 px-4">
+                                        {{ $order->created_at->format('d/m/y') }}
+                                    </td>
+                                    <td class="py-2 px-4">
+                                        {{ $order->status ? 'Aprobado' : 'Pendiente' }}
+                                    </td>
+                                    <td class="py-2 px-4">
+                                        Nombre del vendedor
+                                    </td>
+                                    <td class="py-2 px-4">
+                                        <div class="flex justify-center">
+                                        
+                                            <a href="">
+                                                <img src="{{asset('img/icons/Reorder2.svg')}}" alt="">
+                                            </a>
 
-                                </div>
-                            </td>
-                            <td class="py-2 px-4">
-                                <div class="flex justify-center">
-                                
-                                    <a href="">
-                                        <img src="{{asset('img/icons/Visibility.svg')}}" alt="">
-                                    </a>
+                                        </div>
+                                    </td>
+                                    <td class="py-2 px-4">
+                                        <div class="flex justify-center">
+                                        
+                                            <a href="{{route('products.history', [
+                                                'order' => $order->id
+                                            ])}}">
+                                                <img src="{{asset('img/icons/Visibility.svg')}}" alt="">
+                                            </a>
 
-                                </div>
-                            </td>
-                        </tr>
+                                        </div>
+                                    </td>
+                                </tr>
 
-                        <tr>
-                            <td class="py-2 px-4">
-                                0002256787
-                            </td>
-                            <td class="py-2 px-4">
-                                31/02/22
-                            </td>
-                            <td class="py-2 px-4">
-                                Aprobado
-                            </td>
-                            <td class="py-2 px-4">
-                                Nombre del vendedor
-                            </td>
-                            <td class="py-2 px-4">
-                                <div class="flex justify-center">
-                                
-                                    <a href="">
-                                        <img src="{{asset('img/icons/Reorder2.svg')}}" alt="">
-                                    </a>
+                            @endforeach
+                        </tbody>
+                    </table>
 
-                                </div>
-                            </td>
-                            <td class="py-2 px-4">
-                                <div class="flex justify-center">
-                                
-                                    <a href="">
-                                        <img src="{{asset('img/icons/Visibility.svg')}}" alt="">
-                                    </a>
+                </div>
 
-                                </div>
-                            </td>
-                        </tr>
+            </section>
 
-                        <tr>
-                            <td class="py-2 px-4">
-                                0002256787
-                            </td>
-                            <td class="py-2 px-4">
-                                31/02/22
-                            </td>
-                            <td class="py-2 px-4">
-                                Aprobado
-                            </td>
-                            <td class="py-2 px-4">
-                                Nombre del vendedor
-                            </td>
-                            <td class="py-2 px-4">
-                                <div class="flex justify-center">
-                                
-                                    <a href="">
-                                        <img src="{{asset('img/icons/Reorder2.svg')}}" alt="">
-                                    </a>
-
-                                </div>
-                            </td>
-                            <td class="py-2 px-4">
-                                <div class="flex justify-center">
-                                
-                                    <a href="">
-                                        <img src="{{asset('img/icons/Visibility.svg')}}" alt="">
-                                    </a>
-
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td class="py-2 px-4">
-                                0002256787
-                            </td>
-                            <td class="py-2 px-4">
-                                31/02/22
-                            </td>
-                            <td class="py-2 px-4">
-                                Aprobado
-                            </td>
-                            <td class="py-2 px-4">
-                                Nombre del vendedor
-                            </td>
-                            <td class="py-2 px-4">
-                                <div class="flex justify-center">
-                                
-                                    <a href="">
-                                        <img src="{{asset('img/icons/Reorder2.svg')}}" alt="">
-                                    </a>
-
-                                </div>
-                            </td>
-                            <td class="py-2 px-4">
-                                <div class="flex justify-center">
-                                
-                                    <a href="">
-                                        <img src="{{asset('img/icons/Visibility.svg')}}" alt="">
-                                    </a>
-
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
-            </div>
-
-        </section>
+        @endif
 
     </x-container>
 

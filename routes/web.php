@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
@@ -33,6 +34,21 @@ Route::get('/products/{line?}/{category?}', [ProductController::class, 'index'])
 Route::get('cart', [CartController::class, 'index'])
     ->name('cart.index');
 
+
+Route::get('contact', [ContactController::class, 'index'])
+    ->name('contact.index');
+
+Route::post('contact', [ContactController::class, 'store'])
+    ->name('contact.store');
+
+
+Route::view('rules-of-use', 'privacy-policy')->name('rules-of-use');
+Route::view('privacy-policy', 'privacy-policy')->name('privacy-policy');
+Route::view('cookie-policy', 'privacy-policy')->name('cookie-policy');
+Route::view('faq', 'privacy-policy')->name('faq');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::view('prueba', 'emails.welcome-message');

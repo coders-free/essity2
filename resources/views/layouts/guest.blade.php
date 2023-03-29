@@ -22,11 +22,13 @@
     <body class="bg-gray-50">
         
         <header class="bg-white shadow-lg">
-            <x-container class="px-4 py-4">
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
                 <a href="/">
                     <img src="{{asset('img/logo.png')}}" alt="">
                 </a>
-            </x-container>
+            </div>
+
         </header>
 
 

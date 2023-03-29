@@ -32,7 +32,7 @@
                 <nav class="flex justify-end py-1">
                     <ul class="text-white flex space-x-6 text-sm">
                         <li>
-                            <a href="">Contacto</a>
+                            <a href="{{route('contact.index')}}">Contacto</a>
                         </li>
 
                         <li>
