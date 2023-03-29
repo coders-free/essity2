@@ -27,3 +27,17 @@ Route::get('/select2/towns', [Select2Controller::class, 'towns'])
 
 Route::get('/select2/cooperatives', [Select2Controller::class, 'cooperatives'])
     ->name('select2.cooperatives');
+
+Route::get('/products', function(Request $request){
+
+    $search = $request->search;
+
+    return \App\Models\Product::where('name', 'like', '%' . $search . '%')
+        ->when(
+            $request->exists('selected'),
+            fn ($query) => $query->whereIn('id', $request->input('selected', [])),
+            fn ($query) => $query->limit(10)
+        )
+        ->get();
+
+})->name('api.products.index');

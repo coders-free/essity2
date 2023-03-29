@@ -2,6 +2,10 @@
 
     <x-container class="px-4 py-12">
 
+        <div class="mb-4">
+            @livewire('products.search')
+        </div>
+
         <div class="card card-body">
 
             <h1 class="text-4xl text-darkblue mb-4">Haz tu pedido <span class="uppercase">{{ $line->name }}</span></h1>
