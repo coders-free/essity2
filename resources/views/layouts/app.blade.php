@@ -17,6 +17,7 @@
         @stack('css')
 
         <!-- Scripts -->
+        @wireUiScripts
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         <!-- Styles -->
@@ -62,7 +63,7 @@
 
                 <ul class="flex text-darkblue space-x-4 font-semibold text-sm">
                     <li>
-                        <a href="">
+                        <a href="{{route('products.index')}}">
                             Pedir productos
                         </a>
                     </li>

@@ -11,8 +11,6 @@ class UpdateProfileInformation extends Component
 
     public $user, $profile;
 
-    public $province, $town;
-
     protected $rules = [
         'user.name' => 'required|string|max:255',
         'user.last_name' => 'required|string|max:255',
@@ -32,9 +30,10 @@ class UpdateProfileInformation extends Component
     public function mount(){
         $this->user = auth()->user();
         $this->profile = $this->user->profile;
+    }
 
-        $this->province = Province::find($this->profile->province_id);
-        $this->town = Town::find($this->profile->town_id);
+    public function updatedProfileProvinceId(){
+        $this->profile->town_id = null;
     }
 
     public function updateProfileInformation(){

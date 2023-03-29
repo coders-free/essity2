@@ -14,8 +14,17 @@ class Select2Controller extends Controller
     {
         $term = $request->term ?: '';
 
+        if ($request->search) {
+            $term = $request->search;
+        }
+
         return Province::select('id', 'name as text')
             ->where('name', 'like', '%' . $term . '%')
+            ->when(
+                $request->exists('selected'),
+                fn ($query) => $query->whereIn('id', $request->input('selected', [])),
+                fn ($query) => $query->limit(10)
+            )
             ->get();
     }
 
@@ -24,15 +33,27 @@ class Select2Controller extends Controller
         $term = $request->term ?: '';
         $provinceId = $request->province_id ?: 0;
 
+        if ($request->search) {
+            $term = $request->search;
+        }
+
         return Town::select('id', 'name as text')
             ->where('name', 'like', '%' . $term . '%')
             ->where('province_id', $provinceId)
+            ->when($request->exists('selected'),
+                fn ($query) => $query->whereIn('id', $request->input('selected', [])),
+                fn ($query) => $query->limit(10)
+            )
             ->get();
     }
 
     public function cooperatives(Request $request)
     {
         $term = $request->term ?: '';
+
+        if ($request->search) {
+            $term = $request->search;
+        }
 
         return Cooperative::select('id', 'name as text')
             ->where('name', 'like', '%' . $term . '%')

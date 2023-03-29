@@ -46,6 +46,36 @@
 
         <div class="mb-4">
             <x-label>
+                Provincia
+            </x-label>
+
+            <x-select
+                wire:model="profile.province_id"
+                placeholder="Selecciona una provincia"
+                :async-data="route('select2.provinces')"
+                option-label="text"
+                option-value="id"
+            />
+        </div>
+
+        <div class="mb-4">
+            <x-label>
+                Población
+            </x-label>
+
+            <x-select
+                wire:model.defer="profile.town_id"
+                placeholder="Selecciona una población"
+                :async-data="route('select2.towns', [
+                    'province_id' => $profile->province_id
+                ])"
+                option-label="text"
+                option-value="id"
+            />
+        </div>
+
+        <div class="mb-4">
+            <x-label>
                 Teléfono
             </x-label>
 

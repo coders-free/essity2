@@ -1,7 +1,6 @@
 <?php
 
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\RegisteredUserController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', WelcomeController::class)
     ->name('welcome');
+
+Route::get('/products/{line?}', [ProductController::class, 'index'])
+    ->name('products.index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

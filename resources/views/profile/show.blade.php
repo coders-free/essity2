@@ -10,25 +10,25 @@
                     <ul class="flex flex-wrap -mb-px">
                         <li class="mr-2">
                             <button x-on:click="step = 1" x-bind:class="step == 1 ? 'text-magenta border-magenta' : 'border-transparent hover:text-gray-600 hover:border-gray-300'" 
-                                class="inline-block p-4 border-b-2 rounded-t-lg active dark:text-blue-500 dark:border-blue-500" aria-current="page">
+                                class="inline-block p-4 border-b-2 rounded-t-lg active" aria-current="page">
                                 Detalles de usuario
                             </button>
                         </li>
                         <li class="mr-2">
                             <button x-on:click="step = 2" x-bind:class="step == 2 ? 'text-magenta border-magenta' : 'border-transparent hover:text-gray-600 hover:border-gray-300'" 
-                                class="inline-block p-4 border-b-2 rounded-t-lg active dark:text-blue-500 dark:border-blue-500" aria-current="page">
+                                class="inline-block p-4 border-b-2 rounded-t-lg active" aria-current="page">
                                 Cambiar contraseña
                             </button>
                         </li>
                         <li class="mr-2">
                             <button x-on:click="step = 3" x-bind:class="step == 3 ? 'text-magenta border-magenta' : 'border-transparent hover:text-gray-600 hover:border-gray-300'" 
-                                class="inline-block p-4 border-b-2 rounded-t-lg active dark:text-blue-500 dark:border-blue-500" aria-current="page">
+                                class="inline-block p-4 border-b-2 rounded-t-lg active" aria-current="page">
                                 Cooperativas habituales
                             </button>
                         </li>
                         <li class="mr-2">
                             <button x-on:click="step = 4" x-bind:class="step == 4 ? 'text-magenta border-magenta' : 'border-transparent hover:text-gray-600 hover:border-gray-300'" 
-                                class="inline-block p-4 border-b-2 rounded-t-lg active dark:text-blue-500 dark:border-blue-500" aria-current="page">
+                                class="inline-block p-4 border-b-2 rounded-t-lg active" aria-current="page">
                                 Preferencia de correo electronico
                             </button>
                         </li>
@@ -49,7 +49,7 @@
 
                     {{-- Step 3 --}}
                     <div x-show="step == 3" style="display: none;">
-                        Step 3
+                        @livewire('profile.usual-cooperatives')
                     </div>
 
                     {{-- Step 4 --}}

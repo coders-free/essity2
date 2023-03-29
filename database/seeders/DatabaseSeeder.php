@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             CommunitySeeder::class,
             RoleSeeder::class,
+            LineSeeder::class
         ]);
 
         Cooperative::factory(20)->create();

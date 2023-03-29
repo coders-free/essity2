@@ -110,20 +110,20 @@
                     {{-- Checkbox --}}
                     <div class="my-10">
 
-                        <label class="block">
+                        <label class="flex items-center">
 
                             <x-checkbox id="terms" name="terms" class="mr-2" :checked="old('terms')" />
 
-                            Lee y acepta la <a href="#" class="text-magenta">política y privacidad</a>
+                            <p>Lee y acepta la <a href="#" class="text-magenta">política y privacidad</a></p>
 
                         </label>
 
-                        <label class="block">
+                        <label class="flex items-center">
 
                             <x-checkbox id="oferts" name="oferts" class="mr-2" />
 
-                            Me gustaría recibir ofertas exclusivas e información sobre las novedades de TENA por correo
-                            electronico <span class="text-gray-400">(Opcional)</span>
+                            <p>Me gustaría recibir ofertas exclusivas e información sobre las novedades de TENA por correo
+                            electronico <span class="text-gray-400">(Opcional)</span></p>
 
                         </label>
 
