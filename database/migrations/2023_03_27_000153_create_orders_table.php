@@ -29,6 +29,8 @@ return new class extends Migration
 
             $table->boolean('status')->default(false);
 
+            $table->json('content');
+
             $table->timestamps();
         });
     }

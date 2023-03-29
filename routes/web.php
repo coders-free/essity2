@@ -19,6 +19,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', WelcomeController::class)
     ->name('welcome');
 
+
+Route::get('products/history', [ProductController::class, 'history'])
+    ->name('products.history');
+
 Route::get('/products/details/{product}', [ProductController::class, 'show'])
     ->name('products.show');
 

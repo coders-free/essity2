@@ -37,6 +37,8 @@ class AddToCart extends Component
         Cart::add($this->item)
             ->associate(Product::class);
 
+        Cart::store(auth()->id());
+
         return redirect()->route('cart.index');
 
     }

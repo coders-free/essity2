@@ -24,7 +24,9 @@ class CartController extends Controller
                 $category = Category::find($item->options->category_id);
                 return $category->name;
             });
-        }); */
+        });
+
+        return $cart; */
 
         return view('cart.index');
     }

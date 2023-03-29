@@ -69,7 +69,7 @@
                     </li>
 
                     <li>
-                        <a href="">
+                        <a href="{{route('products.history')}}">
                             Historial de productos
                         </a>
                     </li>
