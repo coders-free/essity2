@@ -25,3 +25,7 @@
 .btn-outline-magenta {
     @apply bg-transparent hover:bg-[#f50082] text-[#f50082] hover:text-white border border-[#f50082] hover:border-transparent; 
 }
+
+.btn-outline-white {
+    @apply bg-transparent hover:bg-white text-white hover:text-[#00005A] border border-white hover:border-transparent; 
+}

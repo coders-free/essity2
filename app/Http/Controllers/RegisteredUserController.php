@@ -6,6 +6,7 @@ use App\Models\Cooperative;
 use App\Models\Province;
 use App\Models\Town;
 use App\Models\User;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 
 class RegisteredUserController extends Controller
@@ -115,6 +116,9 @@ class RegisteredUserController extends Controller
         $user->sendEmailVerificationNotification();
 
         auth()->login($user);
+
+        //Emitir evento de usuario registrado
+        event(new Registered($user));
 
         return redirect()->route('register.exito');
         
