@@ -18,7 +18,3 @@ Route::middleware(['guest'])->group(function () {
         ->name('register.store');
 
 });
-
-Route::get('/register/exito', [RegisteredUserController::class, 'exito'])
-    ->middleware('auth')
-    ->name('register.exito');

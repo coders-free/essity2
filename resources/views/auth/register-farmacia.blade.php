@@ -29,7 +29,7 @@
                 </div>
 
 
-                <form action="{{route('register.store')}}" method="POST">
+                <form action="{{route('register.store')}}" method="POST" class="g-recaptcha">
 
                     @csrf
 
@@ -135,7 +135,7 @@
                             Volver
                         </a>
 
-                        <button class="btn btn-blue" id="submit" @disabled(old('terms') == null)>
+                        <button class="btn btn-blue" id="submitButton" @disabled(old('terms') == null)>
                             Enviar
                         </button>
                     </div>
@@ -225,7 +225,7 @@
 
 
             const termsCheckbox = document.getElementById("terms");
-            const submitButton = document.getElementById("submit");
+            const submitButton = document.getElementById("submitButton");
 
             termsCheckbox.addEventListener("click", function() {
                 if (termsCheckbox.checked) {

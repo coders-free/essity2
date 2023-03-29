@@ -5,7 +5,7 @@
 
         <img src="{{asset('img/auth/login/FullImage.png')}}" alt="" class="mb-8">
 
-        <div class="card">
+        <div class="card form-login">
             <div class="card-body">
                 
 
@@ -16,7 +16,7 @@
                             Iniciar sesión en tu cuenta
                         </h2>
 
-                        <x-validation-errors class="mb-4" />
+                        {{-- <x-validation-errors class="mb-4" /> --}}
 
                         <form method="POST" action="{{ route('login') }}">
 
@@ -114,5 +114,19 @@
         </div>
 
     </x-container>
+
+    @push('js')
+        
+        @if ($errors->any())
+            <script>
+                //Hacer scroll hacia el div con class form-login
+                const formLogin = document.querySelector('.form-login');
+
+                formLogin.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            </script>
+        @endif
+    @endpush
 
 </x-guest-layout>

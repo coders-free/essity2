@@ -6,6 +6,7 @@ use App\Models\Cooperative;
 use App\Models\Province;
 use App\Models\Town;
 use App\Models\User;
+use App\Rules\Recaptcha;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 
@@ -54,6 +55,7 @@ class RegisteredUserController extends Controller
             'nif_2' => ['required', 'string', 'max:9', 'regex:/^[0-9]{8}[A-Za-z]{1}$/'],
             'role' => 'required|in:farmacia,ortopedia',
             'terms' => 'required|accepted',
+            'g-recaptcha-response' => ['required', new Recaptcha],
         ];
 
         if($request->role == 'farmacia'){
@@ -113,14 +115,14 @@ class RegisteredUserController extends Controller
 
         $user->assignRole($request->role);
 
-        $user->sendEmailVerificationNotification();
+        /* $user->sendEmailVerificationNotification(); */
 
         auth()->login($user);
 
         //Emitir evento de usuario registrado
         event(new Registered($user));
 
-        return redirect()->route('register.exito');
+        return redirect()->route('welcome');
         
     }
     

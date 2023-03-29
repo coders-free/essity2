@@ -29,7 +29,7 @@
                 </div>
 
 
-                <form action="{{route('register.store')}}" method="POST">
+                <form action="{{route('register.store')}}" method="POST" class="g-recaptcha">
 
                     @csrf
 
@@ -44,20 +44,20 @@
                     {{-- Checkbox --}}
                     <div class="my-10">
 
-                        <label class="block">
+                        <label class="flex items-center">
 
                             <x-checkbox id="terms" name="terms" class="mr-2" :checked="old('terms')" />
 
-                            Lee y acepta la <a href="#" class="text-magenta">política y privacidad</a>
+                            <p>Lee y acepta la <a href="#" class="text-magenta">política y privacidad</a></p>
 
                         </label>
 
-                        <label class="block">
+                        <label class="flex items-center">
 
                             <x-checkbox id="oferts" name="oferts" class="mr-2" />
 
-                            Me gustaría recibir ofertas exclusivas e información sobre las novedades de TENA por correo
-                            electronico <span class="text-gray-400">(Opcional)</span>
+                            <p>Me gustaría recibir ofertas exclusivas e información sobre las novedades de TENA por correo
+                            electronico <span class="text-gray-400">(Opcional)</span></p>
 
                         </label>
 
@@ -69,7 +69,7 @@
                             Volver
                         </a>
 
-                        <button class="btn btn-blue" id="submit" @disabled(old('terms') == null)>
+                        <button class="btn btn-blue" id="submitButton" @disabled(old('terms') == null)>
                             Enviar
                         </button>
                     </div>
@@ -139,7 +139,7 @@
 
 
             const termsCheckbox = document.getElementById("terms");
-            const submitButton = document.getElementById("submit");
+            const submitButton = document.getElementById("submitButton");
 
             termsCheckbox.addEventListener("click", function() {
                 if (termsCheckbox.checked) {

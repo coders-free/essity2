@@ -17,23 +17,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', WelcomeController::class)
-    ->name('welcome');
+Route::middleware(['auth', 'verified', 'account-to-verify'])->group(function () {
+    
+    Route::get('/', WelcomeController::class)
+        ->name('welcome');
 
+    Route::get('products/history', [ProductController::class, 'history'])
+        ->name('products.history');
 
-Route::get('products/history', [ProductController::class, 'history'])
-    ->name('products.history');
+    Route::get('/products/details/{product}', [ProductController::class, 'show'])
+        ->name('products.show');
 
-Route::get('/products/details/{product}', [ProductController::class, 'show'])
-    ->name('products.show');
+    Route::get('/products/{line?}/{category?}', [ProductController::class, 'index'])
+        ->name('products.index')
+        ->scopeBindings();
 
-Route::get('/products/{line?}/{category?}', [ProductController::class, 'index'])
-    ->name('products.index')
-    ->scopeBindings();
+    Route::get('cart', [CartController::class, 'index'])
+        ->name('cart.index');
 
-Route::get('cart', [CartController::class, 'index'])
-    ->name('cart.index');
+});
 
+Route::view('/account-to-verify', 'account-to-verify')
+    ->name('account-to-verify');
 
 Route::get('contact', [ContactController::class, 'index'])
     ->name('contact.index');

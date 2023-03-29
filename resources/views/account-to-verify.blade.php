@@ -9,7 +9,7 @@
                     Gracias por unirte a Essity
                 </h1>
 
-                <p class="mb-6">Hemos recibido con éxito su registro. En 48 horas recibirás un correo electrónico con una contraseña temporal. En el caso de que no reciba ningún correo electrónico, busque en la carpeta SPAM. Si no ha recibido ningún correo electrónico, llameno a este número 900 12 10 12.</p>
+                <p class="mb-6">Hemos recibido con éxito su registro. En 48 horas recibirás un correo electrónico confirmando la activación de tu cuenta. En el caso de que no reciba ningún correo electrónico llamenos a este número 900 12 10 12.</p>
 
                 <p class="mb-4">Atentamente,</p>
 

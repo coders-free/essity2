@@ -3,13 +3,17 @@
     <x-container class="py-16">
         <div class="card">
             <div class="card-body">
+
+
+                <x-validation-errors class="mb-4" />
+
                 <h1 class="text-3xl text-darkblue mb-4">
                     Contact us
                 </h1>
 
                 
 
-                <form action="{{route('contact.store')}}" method="POST">
+                <form action="{{route('contact.store')}}" method="POST" class="g-recaptcha">
 
                     @csrf
 
@@ -151,7 +155,7 @@
                             Volver
                         </a>
 
-                        <button class="btn btn-blue" id="submit" @disabled(old('terms') == null)>
+                        <button class="btn btn-blue" id="submitButton" @disabled(old('terms') == null)>
                             Enviar
                         </button>
                     </div>
@@ -165,7 +169,7 @@
     @push('js')
         <script>
             const termsCheckbox = document.getElementById("terms");
-            const submitButton = document.getElementById("submit");
+            const submitButton = document.getElementById("submitButton");
 
             termsCheckbox.addEventListener("click", function() {
                 if (termsCheckbox.checked) {
