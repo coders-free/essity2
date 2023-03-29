@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
@@ -18,8 +19,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', WelcomeController::class)
     ->name('welcome');
 
-Route::get('/products/{line?}', [ProductController::class, 'index'])
-    ->name('products.index');
+Route::get('/products/details/{product}', [ProductController::class, 'show'])
+    ->name('products.show');
+
+Route::get('/products/{line?}/{category?}', [ProductController::class, 'index'])
+    ->name('products.index')
+    ->scopeBindings();
+
+Route::get('cart', [CartController::class, 'index'])
+    ->name('cart.index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
