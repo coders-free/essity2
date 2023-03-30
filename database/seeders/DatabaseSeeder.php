@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Cooperative;
+use App\Models\Webinar;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -28,5 +29,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Cooperative::factory(20)->create();
+
+        Webinar::factory(20)->create();
     }
 }

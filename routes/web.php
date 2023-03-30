@@ -3,6 +3,7 @@
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\WebinarController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -41,6 +42,10 @@ Route::middleware(['auth', 'verified', 'account-to-verify'])->group(function () 
 
     Route::post('cart/checkout', [CartController::class, 'store'])
         ->name('cart.store');
+
+    Route::get('webinars', [WebinarController::class, 'index'])
+        ->name('webinars.index');
+    
 
 });
 

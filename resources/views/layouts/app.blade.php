@@ -130,7 +130,7 @@
                 </li>
 
                 <li>
-                    <a href="">
+                    <a href="{{route('webinars.index')}}">
                         Videos
                     </a>
                 </li>
