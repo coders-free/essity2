@@ -109,7 +109,7 @@
                         Historial de pedidos
                     </h2>
 
-                    <a class="text-magenta" href="">Ver todo el historial</a>
+                    <a class="text-magenta" href="{{route('products.history')}}">Ver todo el historial</a>
                 </div>
 
                 <div class="overflow-auto bg-white shadow">

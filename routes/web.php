@@ -35,6 +35,13 @@ Route::middleware(['auth', 'verified', 'account-to-verify'])->group(function () 
     Route::get('cart', [CartController::class, 'index'])
         ->name('cart.index');
 
+    Route::get('cart/checkout', [CartController::class, 'checkout'])
+        ->name('cart.checkout');
+
+
+    Route::post('cart/checkout', [CartController::class, 'store'])
+        ->name('cart.store');
+
 });
 
 Route::view('/account-to-verify', 'account-to-verify')

@@ -30,4 +30,12 @@ class Profile extends Model
         'sales_org',
     ];
 
+    public function province(){
+        return $this->belongsTo(Province::class);
+    }
+
+    public function town(){
+        return $this->belongsTo(Town::class);
+    }
+
 }

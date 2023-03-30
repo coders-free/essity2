@@ -81,6 +81,8 @@ class Cart extends Component
         ]);
 
         $this->destroy();
+
+        return redirect()->route('products.history');
     }
 
     public function render()

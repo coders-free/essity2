@@ -111,9 +111,14 @@
                 VACIAR CARRITO
             </button>
 
-            <button class="btn btn-magenta ml-2" wire:click="checkout()">
+            {{-- <button class="btn btn-magenta ml-2" wire:click="checkout()">
                 CONFIRMAR PEDIDO
-            </button>
+            </button> --}}
+
+            <a href="{{route('cart.checkout')}}" class="btn btn-magenta ml-2">
+                CONFIRMAR PEDIDO
+            </a>
+
         @endif
 
     </div>
