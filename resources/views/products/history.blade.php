@@ -2,7 +2,7 @@
 
     <x-container class="px-4 py-12">
 
-        <h1 class="text-5xl font-semibold text-darkblue mb-8">Historial de pedidos</h1>
+        <h1 class="text-5xl font-semibold text-darkblue-500 mb-8">Historial de pedidos</h1>
 
 
         <div class="mb-24">
@@ -74,7 +74,7 @@
                         <section class="bg-white shadow" x-data="{
                             open: false
                         }">
-                            <header class="p-4 bg-darkblue">
+                            <header class="p-4 bg-darkblue-500">
                                 <h1 class="text-white font-semibold uppercase">
                                     Pedido ID: 
                                     {{ str_pad($order->id, 8, '0', STR_PAD_LEFT) }}
@@ -82,7 +82,7 @@
                             </header>
 
                             <table class="w-full">
-                                <tbody class="text-darkblue divide-y divide-gray-200">
+                                <tbody class="text-darkblue-500 divide-y divide-gray-200">
                                     <tr>
                                         <td class="px-4 py-2 font-semibold">
                                             Fecha de pedido
@@ -157,7 +157,7 @@
                                 </tbody>
                             </table>
 
-                            <button x-on:click="open = !open" class="w-full flex justify-between items-center px-4 py-2 border-y border-gray-200 text-magenta font-semibold">
+                            <button x-on:click="open = !open" class="w-full flex justify-between items-center px-4 py-2 border-y border-gray-200 text-magenta-500 font-semibold">
                                 Mostrar productos
 
                                 <i class="fa-solid" x-bind:class="open == true ? 'fa-angle-up' : 'fa-angle-down'"></i>
@@ -168,7 +168,7 @@
                                     
                                     <article>
                                         <header class="p-4 bg-gray-300">
-                                            <h1 class="text-darkblue font-semibold uppercase">
+                                            <h1 class="text-darkblue-500 font-semibold uppercase">
                                                 {{ $line }}
                                             </h1>
                                         </header>
@@ -177,13 +177,13 @@
 
                                             <article>
                                                 <header class="px-4 py-2 bg-gray-50">
-                                                    <h2 class="text-darkblue font-semibold">{{ $category }}</h2>
+                                                    <h2 class="text-darkblue-500 font-semibold">{{ $category }}</h2>
                                                 </header>
 
                                                 <table class="w-full">
 
                                                     <thead>
-                                                        <tr class="text-darkblue border-b border-gray-200">
+                                                        <tr class="text-darkblue-500 border-b border-gray-200">
                                                             <th class="px-4 py-2 text-left">
                                                                 C.N
                                                             </th>

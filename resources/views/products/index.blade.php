@@ -18,7 +18,7 @@
 
                         <li class="mr-2">
                             <a href="{{route('products.index', $item)}}"
-                                class="inline-block p-4 border-b-2 rounded-t-lg active uppercase {{ request()->url() == route('products.index', $item) ? 'text-magenta border-magenta' : 'border-transparent hover:text-gray-600 hover:border-gray-300'}}">
+                                class="inline-block p-4 border-b-2 rounded-t-lg active uppercase {{ request()->url() == route('products.index', $item) ? 'text-magenta-500 border-magenta-500' : 'border-transparent hover:text-gray-600 hover:border-gray-300'}}">
                                 {{ $item->name }}
                             </a>
                         </li>

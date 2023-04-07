@@ -10,22 +10,18 @@
     @apply font-bold py-2 px-4 rounded disabled:opacity-25;
 }
 
-/* .btn-blue {
-    @apply bg-blue-500 hover:bg-blue-700 text-white;
-} */
-
 .btn-blue {
-    @apply bg-[#00005A] hover:bg-[#000079] text-white;
+    @apply bg-darkblue-500 hover:bg-darkblue-500 text-white;
 }
 
 .btn-magenta {
-    @apply bg-[#f50082] hover:bg-[#C10066] text-white;
+    @apply bg-magenta-500 hover:bg-magenta-700 text-white;
 }
 
 .btn-outline-magenta {
-    @apply bg-transparent hover:bg-[#f50082] text-[#f50082] hover:text-white border border-[#f50082] hover:border-transparent; 
+    @apply bg-transparent hover:bg-magenta-500 text-magenta-500 hover:text-white border border-magenta-500 hover:border-transparent; 
 }
 
 .btn-outline-white {
-    @apply bg-transparent hover:bg-white text-white hover:text-[#00005A] border border-white hover:border-transparent; 
+    @apply bg-transparent hover:bg-white text-white hover:text-darkblue-500 border border-white hover:border-transparent; 
 }

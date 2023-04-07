@@ -7,7 +7,7 @@
 
                 <x-validation-errors class="mb-4" />
 
-                <h1 class="text-3xl text-darkblue mb-4">
+                <h1 class="text-3xl text-darkblue-500 mb-4">
                     Contact us
                 </h1>
 
@@ -18,7 +18,7 @@
                     @csrf
 
                     <div class="bg-gray-100 p-4 mb-4">
-                        <p class="text-darkblue font-semibold">Pharmacy details</p>
+                        <p class="text-darkblue-500 font-semibold">Pharmacy details</p>
                     </div>
 
                     <div class="mb-4">
@@ -86,7 +86,7 @@
                     </div>
 
                     <div class="bg-gray-100 p-4 mb-4">
-                        <p class="text-darkblue font-semibold">Detalle de usuario</p>
+                        <p class="text-darkblue-500 font-semibold">Detalle de usuario</p>
                     </div>
 
                     <div class="mb-4">
@@ -114,7 +114,7 @@
                     </div>
 
                     <div class="bg-gray-100 p-4 mb-4">
-                        <p class="text-darkblue font-semibold">Mensaje</p>
+                        <p class="text-darkblue-500 font-semibold">Mensaje</p>
                     </div>
 
                     <div class="mb-12">
@@ -134,7 +134,7 @@
 
                             <x-checkbox id="terms" name="terms" class="mr-2" :checked="old('terms')" />
 
-                            <p>Lee y acepta la <a href="#" class="text-magenta">política y privacidad</a></p>
+                            <p>Lee y acepta la <a href="#" class="text-magenta-500">política y privacidad</a></p>
 
                         </label>
 

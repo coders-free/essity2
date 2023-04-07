@@ -1,4 +1,4 @@
-<footer class="bg-darkblue mt-auto">
+<footer class="bg-darkblue-500 mt-auto">
     <x-container class="px-4">
 
 

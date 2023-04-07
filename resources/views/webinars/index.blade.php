@@ -3,7 +3,7 @@
     <x-container class="px-4 py-12">
 
         <div class="card card-body">
-            <h1 class="text-4xl text-darkblue mb-6">Webinar videos</h1>
+            <h1 class="text-4xl text-darkblue-500 mb-6">Webinar videos</h1>
 
             <ul class="space-y-6">
                 @foreach ($webinars as $webinar)

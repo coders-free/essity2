@@ -5,7 +5,7 @@
             <img src="{{asset('img/home/TENA-Women-Lights-Range-1.png')}}" alt="" class="w-full">
         </div>
 
-        <div class="lg:col-span-3 bg-darkblue">
+        <div class="lg:col-span-3 bg-darkblue-500">
             <div class="p-16 text-white">
                 <h1 class="text-7xl mb-6">
                     Tena Lights liner <br/> for sensitive skin
@@ -23,7 +23,7 @@
     <x-container class="px-4">
         {{-- Servicios más usados --}}
         <section class="mb-12">
-            <h2 class="text-4xl text-darkblue mb-4">
+            <h2 class="text-4xl text-darkblue-500 mb-4">
                 Servicios más usados
             </h2>
 
@@ -33,7 +33,7 @@
                         
                         <img src="{{asset('img/home/frame/1.png')}}" class="mb-8" alt="">
 
-                        <span class="text-magenta text-xl font-semibold">
+                        <span class="text-magenta-500 text-xl font-semibold">
                             Pedir productos
                         </span>
                         
@@ -45,7 +45,7 @@
                         
                         <img src="{{asset('img/home/frame/2.png')}}" class="mb-8" alt="">
 
-                        <span class="text-magenta text-xl font-semibold">
+                        <span class="text-magenta-500 text-xl font-semibold">
                             Pedir muestras
                         </span>
                         
@@ -57,7 +57,7 @@
                         
                         <img src="{{asset('img/home/frame/3.png')}}" class="mb-8" alt="">
 
-                        <span class="text-magenta text-xl font-semibold">
+                        <span class="text-magenta-500 text-xl font-semibold">
                             Pedir material PLV
                         </span>
                         
@@ -69,7 +69,7 @@
                         
                         <img src="{{asset('img/home/frame/4.png')}}" class="mb-8" alt="">
 
-                        <span class="text-magenta text-xl font-semibold">
+                        <span class="text-magenta-500 text-xl font-semibold">
                             Videos
                         </span>
                         
@@ -81,7 +81,7 @@
         {{-- Nuevos productos --}}
         <section class="mb-12">
             <div class="grid md:grid-cols-2">
-                <div class="p-16 bg-darkblue text-white">
+                <div class="p-16 bg-darkblue-500 text-white">
                     <h1 class="text-5xl mb-6">
                         New releases.
                     </h1>
@@ -105,17 +105,17 @@
             <section class="mb-24">
 
                 <div class="flex justify-between mb-4">
-                    <h2 class="text-4xl text-darkblue">
+                    <h2 class="text-4xl text-darkblue-500">
                         Historial de pedidos
                     </h2>
 
-                    <a class="text-magenta" href="{{route('products.history')}}">Ver todo el historial</a>
+                    <a class="text-magenta-500" href="{{route('products.history')}}">Ver todo el historial</a>
                 </div>
 
                 <div class="overflow-auto bg-white shadow">
 
                     <table class="w-full">
-                        <thead class="bg-darkblue text-white">
+                        <thead class="bg-darkblue-500 text-white">
                             <tr>
                                 <th class="py-2 px-4 text-left">Pedido ID</th>
                                 <th class="py-2 px-4 text-left">Fecha de pedido</th>

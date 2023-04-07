@@ -70,7 +70,7 @@
 <body class="font-sans antialiased bg-gray-50">
     <x-banner />
 
-    <div class="bg-darkblue">
+    <div class="bg-darkblue-500">
 
         <x-container>
             <nav class="flex justify-end py-1">
@@ -104,7 +104,7 @@
                 <img src="{{ asset('img/logo.png') }}" alt="">
             </a>
 
-            <ul class="flex text-darkblue space-x-4 font-semibold text-sm">
+            <ul class="flex text-darkblue-500 space-x-4 font-semibold text-sm">
                 <li>
                     <a href="{{ route('products.index') }}">
                         Pedir productos

@@ -8,21 +8,21 @@
                 
                 <section class="bg-white shadow">
 
-                    <header class="p-4 bg-darkblue">
+                    <header class="p-4 bg-darkblue-500">
                         <h1 class="text-white font-semibold uppercase">{{ $line }}</h1>
                     </header>
 
                     @foreach ($categories as $category => $products)
                         <article>
                             <header class="px-4 py-2 bg-gray-50">
-                                <h2 class="text-darkblue font-semibold">{{ $category }}</h2>
+                                <h2 class="text-darkblue-500 font-semibold">{{ $category }}</h2>
                             </header>
 
 
                             <table class="w-full">
 
                                 <thead>
-                                    <tr class="text-darkblue border-b border-gray-200">
+                                    <tr class="text-darkblue-500 border-b border-gray-200">
                                         <th class="px-4 py-2">
                                             C.N
                                         </th>
@@ -53,7 +53,7 @@
                                             </td>
                                             <td class="px-4 py-2 text-center w-1/5">
                                                 <button class="disabled:opacity-25" wire:click="decrease('{{$product->rowId}}')" wire:loading.attr="disabled" wire:target="decrease('{{$product->rowId}}')">
-                                                    <i class="fa-solid fa-circle-minus text-xl text-magenta"></i>
+                                                    <i class="fa-solid fa-circle-minus text-xl text-magenta-500"></i>
                                                 </button>
                         
                                                 <span class="inline-flex justify-center w-10 text-lg">
@@ -61,7 +61,7 @@
                                                 </span>
                         
                                                 <button class="disabled:opacity-25" wire:click="increase('{{$product->rowId}}')" wire:loading.attr="disabled" wire:target="increase('{{$product->rowId}}')">
-                                                    <i class="fa-solid fa-circle-plus text-xl text-magenta"></i>
+                                                    <i class="fa-solid fa-circle-plus text-xl text-magenta-500"></i>
                                                 </button>
                                             </td>
                                             <td class="px-4 py-2 text-center w-1/5">
@@ -70,7 +70,7 @@
                                             <td class="px-4 py-2 text-center w-1/5">
                                             
                                                 <button class="disabled:opacity-25" wire:click="remove('{{$product->rowId}}')" wire:loading.attr="disabled" wire:target="remove('{{$product->rowId}}')">
-                                                    <i class="fa-solid fa-circle-xmark text-xl text-magenta"></i>
+                                                    <i class="fa-solid fa-circle-xmark text-xl text-magenta-500"></i>
                                                 </button>
 
                                             </td>
@@ -92,7 +92,7 @@
 
     @else
 
-        <h1 class="text-4xl text-darkblue font-semibold text-center">Parece que no tiene items agregados</h1>
+        <h1 class="text-4xl text-darkblue-500 font-semibold text-center">Parece que no tiene items agregados</h1>
         
         <figure class="flex justify-center mb-24">
             <img class="max-w-lg" src="{{asset('img/no-funciona.svg')}}" alt="">

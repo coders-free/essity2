@@ -12,7 +12,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
 
                     <div>
-                        <h2 class="text-darkblue text-2xl font-semibold mb-6">
+                        <h2 class="text-darkblue-500 text-2xl font-semibold mb-6">
                             Iniciar sesión en tu cuenta
                         </h2>
 
@@ -45,7 +45,7 @@
                                 </label>
                             </div>
 
-                            <div class="mb-6 text-darkblue flex items-center">
+                            <div class="mb-6 text-darkblue-500 flex items-center">
                                 <i class="fa-solid fa-circle-info"></i>
 
                                 <a class="ml-2 underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
@@ -65,7 +65,7 @@
                     </div>
 
                     <div class="flex flex-col">
-                        <h2 class="text-darkblue text-2xl font-semibold mb-6">
+                        <h2 class="text-darkblue-500 text-2xl font-semibold mb-6">
                             ¿Por qué registrarse?
                         </h2>
 
@@ -75,22 +75,22 @@
 
                         <ul class="space-y-2">
                             <li>
-                                <i class="fa-solid fa-circle-check text-magenta mr-2"></i>
+                                <i class="fa-solid fa-circle-check text-magenta-500 mr-2"></i>
                                 Lorem ipsum dolor sit amet.
                             </li>
 
                             <li>
-                                <i class="fa-solid fa-circle-check text-magenta mr-2"></i>
+                                <i class="fa-solid fa-circle-check text-magenta-500 mr-2"></i>
                                 Lorem ipsum dolor sit amet.
                             </li>
 
                             <li>
-                                <i class="fa-solid fa-circle-check text-magenta mr-2"></i>
+                                <i class="fa-solid fa-circle-check text-magenta-500 mr-2"></i>
                                 Lorem ipsum dolor sit amet.
                             </li>
 
                             <li>
-                                <i class="fa-solid fa-circle-check text-magenta mr-2"></i>
+                                <i class="fa-solid fa-circle-check text-magenta-500 mr-2"></i>
                                 Lorem ipsum dolor sit amet.
                             </li>
                         </ul>

@@ -30,7 +30,7 @@
 
                     <td class="flex justify-center p-2">
                         <button wire:click="deleteCooperative({{ $cooperative->id }})" class="disabled:opacity-25" wire:loading.attr="disabled" wire:target="deleteCooperative({{ $cooperative->id }})">
-                            <i class="fa-solid fa-circle-xmark text-magenta text-xl"></i>
+                            <i class="fa-solid fa-circle-xmark text-magenta-500 text-xl"></i>
                         </button>
                     </td>
                 </tr>
