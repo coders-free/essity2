@@ -22,13 +22,13 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $this->call([
+        /* $this->call([
             CommunitySeeder::class,
             RoleSeeder::class,
             LineSeeder::class
         ]);
 
-        Cooperative::factory(20)->create();
+        Cooperative::factory(20)->create(); */
 
         Webinar::factory(20)->create();
     }
